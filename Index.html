@@ -14,6 +14,7 @@
             font-family: 'Poppins', sans-serif;
             background: #0D1117;
             color: #E6EDF3;
+            overflow-x: hidden; /* Prevent horizontal scroll from blob animation */
         }
         .gradient-bg {
             background-image: linear-gradient(to right, #00C6FF, #0072FF);
@@ -29,6 +30,26 @@
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
         }
+
+        /* Keyframes for the Blob Animation */
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+
+        .animate-blob {
+            animation: blob 7s infinite ease-in-out;
+        }
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+
+        /* Keyframes for the Pulse Once Hover Effect */
         @keyframes pulse-once {
             0% { transform: scale(1); }
             50% { transform: scale(1.05); }
@@ -41,7 +62,7 @@
 </head>
 <body class="min-h-screen p-4 md:p-8 relative">
 
-    <!-- Background Gradients -->
+    <!-- Background Gradients with Blob Animation -->
     <div class="absolute inset-0 z-0">
         <div class="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob"></div>
         <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob animation-delay-2000"></div>
@@ -53,8 +74,8 @@
         <!-- Hero Section -->
         <header class="space-y-4 pt-16">
             <div class="flex flex-col items-center justify-center space-y-4">
-                <!-- Image path updated to reference the file in the same directory -->
-                <img src="35a2a697-d1f9-497a-a246-995cf493c7ad.jpeg" alt="Truthub Logo" class="w-24 h-24 object-contain animate-pulse-once">
+                <!-- Image path updated to reference the new file -->
+                <img src="IMG_3852.jpg" alt="Truthub Logo" class="w-24 h-24 object-contain animate-pulse-once">
                 <h1 class="text-6xl sm:text-7xl font-bold">
                     <span class="text-white">TRUTH</span><span class="gradient-text">UB</span>
                 </h1>
