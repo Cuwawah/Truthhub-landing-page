@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truthub - Your AI Fact-Checking Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0D1117;
+            color: #E6EDF3;
+        }
+        .gradient-bg {
+            background-image: linear-gradient(to right, #00C6FF, #0072FF);
+        }
+        .gradient-text {
+            background-image: linear-gradient(to right, #00C6FF, #0072FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-bg {
+            background: rgba(22, 27, 34, 0.5);
+            border: 1px solid rgba(240, 246, 252, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        @keyframes pulse-once {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .animate-pulse-once:hover {
+            animation: pulse-once 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 md:p-8 relative">
+
+    <!-- Background Gradients -->
+    <div class="absolute inset-0 z-0">
+        <div class="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob animation-delay-2000"></div>
+    </div>
+
+    <!-- Main Content Container -->
+    <div class="relative z-10 max-w-5xl w-full mx-auto space-y-12 text-center">
+        
+        <!-- Hero Section -->
+        <header class="space-y-4 pt-16">
+            <div class="flex flex-col items-center justify-center space-y-4">
+                <img src="/images/35a2a697-d1f9-497a-a246-995cf493c7ad.jpeg" alt="Truthub Logo" class="w-24 h-24 object-contain animate-pulse-once">
+                <h1 class="text-6xl sm:text-7xl font-bold">
+                    <span class="text-white">TRUTH</span><span class="gradient-text">UB</span>
+                </h1>
+            </div>
+            <p class="text-gray-300 text-lg sm:text-xl max-w-2xl mx-auto">
+                In a world of information, we provide clarity. Your AI-powered assistant for instant, reliable fact-checking.
+            </p>
+        </header>
+
+        <!-- Call to Action Button -->
+        <div class="flex justify-center">
+            <a href="https://truthub.netlify.app/" class="inline-block px-10 py-5 font-bold rounded-full text-xl shadow-xl transition-all transform hover:scale-110 gradient-bg">
+                Start Fact-Checking Now
+            </a>
+        </div>
+
+        <!-- Feature Grid Section -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
+            <!-- Feature Card 1 -->
+            <div class="card-bg p-8 rounded-3xl shadow-lg transition-transform transform hover:scale-105">
+                <div class="flex items-center justify-center mb-4 text-blue-400 text-4xl">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+                <h3 class="font-semibold text-2xl mb-2">Deep Analysis</h3>
+                <p class="text-gray-400">Our AI delves into claims, providing comprehensive context and data.</p>
+            </div>
+            <!-- Feature Card 2 -->
+            <div class="card-bg p-8 rounded-3xl shadow-lg transition-transform transform hover:scale-105">
+                <div class="flex items-center justify-center mb-4 text-blue-400 text-4xl">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h3 class="font-semibold text-2xl mb-2">Unbiased Verdicts</h3>
+                <p class="text-gray-400">Experience objective and transparent results, free from human bias.</p>
+            </div>
+            <!-- Feature Card 3 -->
+            <div class="card-bg p-8 rounded-3xl shadow-lg transition-transform transform hover:scale-105">
+                <div class="flex items-center justify-center mb-4 text-blue-400 text-4xl">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3 class="font-semibold text-2xl mb-2">Lightning Fast</h3>
+                <p class="text-gray-400">Get instant verification, helping you stay ahead of the narrative.</p>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
